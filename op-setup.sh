@@ -36,12 +36,15 @@ sudo a2dismod mpm_prefork
 sudo a2enmod mpm_event
 
 sudo sudo /etc/init.d/apache2 restart
-echo "Done and dusted! Check notes in this script to see what is next."
+
+clear
 
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${YELLOW}List of things to do"
+echo "${YELLOW}Done and dusted! Check notes in this script to see what is next."
+
+echo -e "List of things to do"
 echo " "
 echo "# Add user to group and change permissions for FTP"
 echo "# sudo adduser nathan www-data"
@@ -51,4 +54,6 @@ echo " "
 echo "# HTTP 2"
 echo "# nano /etc/apache2/sites-available/000-default-le-ssl.conf"
 echo "# Add line under <Virtual host ...."
-echo "# Protocols h2 h2c http/1.1"
+echo "# Protocols h2 h2c http/1.1${NC}"
+echo " "
+echo " "

@@ -38,12 +38,10 @@ sudo a2enmod mpm_event
 sudo sudo /etc/init.d/apache2 restart
 echo "Done and dusted! Check notes in this script to see what is next."
 
-red='tput setaf 1'
-green='tput setaf 2'
-reset='tput sgr0'
-echo "${red}red text ${green}green text${reset}"
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
 
-echo "${green}List of things to do"
+echo -e "${YELLOW}List of things to do"
 echo " "
 echo "# Add user to group and change permissions for FTP"
 echo "# sudo adduser nathan www-data"
